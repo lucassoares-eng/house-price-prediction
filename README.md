@@ -36,9 +36,12 @@ The objective of this project is to develop a robust and efficient machine learn
 ### 1. **Data Loading**
    - Data is loaded from a CSV file.
    - Ensure the file is located in the `data/house_prices.csv` directory.
+   - The dataset used is publicly available from the Kaggle House Prices - Advanced Regression Techniques competition.
+   
+    👉 [Kaggle Dataset Link](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)  
 
 ### 2. **Preprocessing**
-   - Filling missing values (median for numerical columns, mode for categorical columns).
+   - Filling missing values.
    - Transforming categorical variables into dummies.
 
 ### 3. **Data Splitting**
