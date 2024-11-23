@@ -1,8 +1,8 @@
 import os
+import pickle
 import subprocess
 import shap
 import json
-import joblib
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -217,8 +217,9 @@ def user_input_features():
 if __name__ == "__main__":
     try:
         model_file = "models/best_model.pkl"
-        model = joblib.load(model_file)
-         # Open and read the JSON file
+        with open(model_file, "rb") as f:
+            model = pickle.load(f)
+        # Open and read the JSON file
         json_file_path = "reports/best_model.json"
         with open(json_file_path, 'r') as file:
             best_model_data = json.load(file)
@@ -229,7 +230,8 @@ if __name__ == "__main__":
         print("Model not found. Running `main.py` to train the model...")
         # Execute main.py
         subprocess.run(["python", "main.py"], check=True)
-        model = joblib.load(model_file)
+        with open(model_file, "rb") as f:
+            model = pickle.load(f)
         print(f"Model {model_name} loaded successfully after training!")
 
     # Load the dataset (ensure preprocessing matches training)
