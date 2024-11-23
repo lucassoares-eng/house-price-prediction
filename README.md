@@ -1,6 +1,6 @@
 # House Price Prediction (Regression)
 
-This repository showcases a machine learning project designed to predict house prices using various regression algorithms and a neural network for performance comparison. The project explores different models to determine the best-performing one based on accuracy metrics. You can view the results and make your own predictions through this [interactive link]().
+This repository showcases a machine learning project designed to predict house prices using various regression algorithms and a neural network for performance comparison. The project explores different models to determine the best-performing one based on accuracy metrics. You can view the results and make your own predictions through this [interactive link](https://lucasjs-house-price-prediction.streamlit.app/).
 
 ---
 
